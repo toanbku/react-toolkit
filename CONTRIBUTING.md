@@ -1,3 +1,5 @@
+dummy comment to test ci
+
 # Contributing to the React Toolkit
 
 Thanks for taking the time to contribute !
