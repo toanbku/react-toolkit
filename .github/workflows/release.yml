@@ -20,13 +20,18 @@ jobs:
         with:
           version: 14.x
 
+      - name: Set up PNPM
+        uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7.5.2
+
       - name: Install Dependencies
-        run: yarn
+        run: pnpm install
 
       - name: Create Release Pull Request or Publish to npm
         uses: changesets/action@master
         with:
-          publish: yarn release
+          publish: pnpm release
           commit: 'release: bump package(s)'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
