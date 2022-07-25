@@ -19,10 +19,13 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
-      - name: Install deps and build
+      - name: Set up PNPM
         uses: pnpm/action-setup@v2.2.2
         with:
           version: 6.0.2
+
+      - name: Install dependencies
+        run: pnpm install
 
       - name: Test
         run: pnpm test:ci
