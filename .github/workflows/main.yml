@@ -25,4 +25,4 @@ jobs:
           version: 6.0.2
 
       - name: Test
-        run: yarn test:ci
+        run: pnpm test:ci
