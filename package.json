@@ -1,10 +1,6 @@
 {
   "name": "dwarvesf-react-toolkit",
   "private": true,
-  "workspaces": [
-    "packages/*",
-    "docs"
-  ],
   "scripts": {
     "lerna": "lerna",
     "dev": "turbo run dev --parallel --no-cache",
@@ -13,21 +9,21 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "build": "turbo run build",
-    "prepublish": "yarn run build",
-    "start:app": "yarn run build && yarn --cwd example && yarn --cwd example start",
+    "prepublish": "pnpm build",
+    "start:app": "pnpm build && yarn --cwd example && yarn --cwd example start",
     "changeset": "changeset",
     "release": "changeset publish",
     "version:canary": "changeset version --snapshot canary",
     "release:canary": "changeset publish --tag canary",
     "format": "prettier -c --write \"*/**\"",
     "postinstall": "husky install",
-    "docs:build": "yarn search-meta:gen && turbo run build --scope=@dwarvesf/react-toolkit-docs --include-dependencies --parallel",
+    "docs:build": "pnpm search-meta:gen && turbo run build --scope=@dwarvesf/react-toolkit-docs --include-dependencies --parallel",
     "docs:dev": "turbo run dev --scope=@dwarvesf/react-toolkit-docs --include-dependencies --parallel",
     "search-meta:gen": "ts-node scripts/get-search-meta.ts",
     "pkg": "manypkg run",
     "check:pkgs": "manypkg check",
     "fix:pkgs": "manypkg fix",
-    "boot": "yarn prestart && yarn build"
+    "boot": "pnpm prestart && pnpm build"
   },
   "husky": {
     "hooks": {
@@ -84,6 +80,7 @@
   },
   "devDependencies": {
     "@testing-library/react": "^12.1.0",
+    "object-assign": "^4.1.1",
     "turbo": "^1.0.24"
   },
   "turbo": {

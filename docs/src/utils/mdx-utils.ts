@@ -1,5 +1,5 @@
 import path from 'path'
-import execa from 'execa'
+import { execa } from 'execa'
 import format from 'date-fns/format'
 import fromUnixTime from 'date-fns/fromUnixTime'
 import { addLeadingSlash, getEditUrl } from '@docusaurus/utils'
