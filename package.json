@@ -1,10 +1,6 @@
 {
   "name": "dwarvesf-react-toolkit",
   "private": true,
-  "workspaces": [
-    "packages/*",
-    "docs"
-  ],
   "scripts": {
     "lerna": "lerna",
     "dev": "turbo run dev --parallel --no-cache",
