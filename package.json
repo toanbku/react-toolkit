@@ -80,6 +80,7 @@
   },
   "devDependencies": {
     "@testing-library/react": "^12.1.0",
+    "object-assign": "^4.1.1",
     "turbo": "^1.0.24"
   },
   "turbo": {
